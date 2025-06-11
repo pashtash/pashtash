@@ -105,25 +105,24 @@ const closeModal = () => {
 const firstSpin = () => {
 	closeModal()
 	startSpin()
-	setTimeout(function() {
-		swiper.autoplay.stop()
-		swiper.slideToLoop('5', '1500', 
-		setTimeout(function() {
-			showModal('modal-retry')
-		}, 2000))
-	}, 4000)
+        setTimeout(function() {
+                swiper.autoplay.stop()
+                swiper.slideToLoop('5', '1500')
+                setTimeout(function() {
+                        showModal('modal-retry')
+                }, 2000)
+        }, 4000)
 };
 
 const secondSpin = () => {
 	closeModal()
 	startSpin()
-	setTimeout(function() {
-		swiper.autoplay.stop()
-		swiper.slideToLoop('0', '1500', 
-			setTimeout(function() {
-				showModal('modal-finish')
-				setInterval("countdown()", 1000)
-			}, 2000)
-		)
-	}, 4000)
+        setTimeout(function() {
+                swiper.autoplay.stop()
+                swiper.slideToLoop('0', '1500')
+                setTimeout(function() {
+                        showModal('modal-finish')
+                        setInterval("countdown()", 1000)
+                }, 2000)
+        }, 4000)
 };
